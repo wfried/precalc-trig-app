@@ -33,7 +33,7 @@ const App = () => {
 
   return (
     <div className="flex flex-col items-center bg-gray-50 p-6 rounded-lg shadow-md max-w-4xl mx-auto">
-      <h1 className="text-3xl font-bold mb-4 text-blue-800">Precalculus Trigonometry Study Guide</h1>
+      <h1 className="text-3xl font-bold mb-4 text-blue-900">Precalculus Trigonometry Study Guide</h1>
       
       <TabNavigation tabView={tabView} setTabView={setTabView} />
       
