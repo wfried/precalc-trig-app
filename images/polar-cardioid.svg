@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Coordinate grid -->
+  <line x1="0" y1="100" x2="200" y2="100" stroke="#ccc" stroke-width="1"/>
+  <line x1="100" y1="0" x2="100" y2="200" stroke="#ccc" stroke-width="1"/>
+  
+  <!-- Cardioid: r = a(1 + cos(θ)) -->
+  <path d="M 100 100 
+           L 170 100 
+           A 70 70 0 0 1 100 170 
+           A 70 70 0 0 1 100 100 
+           Z" 
+        fill="none" stroke="#ef4444" stroke-width="2.5"/>
+  
+  <!-- Labels -->
+  <text x="105" y="180" font-size="12" fill="#333">r = a(1 + cos(θ))</text>
+</svg>
