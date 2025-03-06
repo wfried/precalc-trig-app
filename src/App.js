@@ -1,6 +1,10 @@
 import React from 'react';
 import TabNavigation from './components/common/TabNavigation';
 import MainPage from './pages/MainPage';
+import PatternsPage from './pages/PatternsPage';
+import ReferencePage from './pages/ReferencePage';
+import RotaryPage from './pages/RotaryPage';
+import AdvancedPage from './pages/AdvancedPage';
 import useTabs from './hooks/useTabs';
 
 /**
@@ -14,7 +18,14 @@ const App = () => {
     switch (tabView) {
       case 'main':
         return <MainPage currentMode={currentMode} setCurrentMode={setCurrentMode} />;
-      // The other tabs like patterns, reference, rotary, and advanced would be imported components here
+      case 'patterns':
+        return <PatternsPage />;
+      case 'reference':
+        return <ReferencePage />;
+      case 'rotary':
+        return <RotaryPage />;
+      case 'advanced':
+        return <AdvancedPage />;
       default:
         return <div>Tab content not available</div>;
     }
