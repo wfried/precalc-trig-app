@@ -18,7 +18,7 @@ const QuizQuestion = ({
   if (!currentQuestion) return null;
 
   return (
-    <div className="w-full max-w-md">
+    <div className="w-full max-w-md mx-auto">
       <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
         <h3 className="text-lg font-semibold mb-4">Question:</h3>
         <p className="mb-6">{currentQuestion.question}</p>

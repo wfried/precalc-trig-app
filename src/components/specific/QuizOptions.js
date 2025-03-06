@@ -5,7 +5,7 @@ import React from 'react';
  */
 const QuizOptions = ({ startQuiz }) => {
   return (
-    <div className="w-full max-w-md">
+    <div className="w-full max-w-md mx-auto">
       <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
         <h3 className="text-xl font-semibold mb-4 text-center text-blue-800">Quiz Options</h3>
         <p className="mb-4 text-gray-600">Choose the type of questions you want to practice:</p>
