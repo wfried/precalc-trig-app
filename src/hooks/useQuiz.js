@@ -56,24 +56,26 @@ const useQuiz = () => {
     return selectedAngle;
   }, [recentAngles]);
 
-  // Start the quiz with selected question type
-  const startQuiz = useCallback((selectedType) => {
-    // First set the question type
-    setQuestionType(selectedType);
-    
-    // Then initialize the quiz and hide options
-    setQuizInitialized(true);
-    setShowQuizOptions(false);
-    setScore({ correct: 0, total: 0 });
-    setRecentAngles([]);
-    
-    // We use setTimeout to ensure state is updated before generating the question
-    setTimeout(() => {
-      generateQuestion(selectedType);
-    }, 50);
-  }, [generateQuestion]);
+  // Helper function to reset user answer
+  const resetUserAnswer = () => {
+    setUserAnswer({ 
+      sin: '', 
+      cos: '', 
+      tan: '', 
+      sec: '', 
+      csc: '', 
+      cot: '', 
+      degrees: '', 
+      radians: '',
+      referenceAngle: '',
+      coterminalAngle: '',
+      arcLength: '',
+      angularVelocity: '',
+      linearVelocity: ''
+    });
+  };
 
-  // Generate a new question
+  // Generate a new question - defined first to avoid circular dependency
   const generateQuestion = useCallback((type = questionType) => {
     const angle = getRandomAngle();
     let selectedQuestion;
@@ -129,24 +131,22 @@ const useQuiz = () => {
     setAnswered(false);
   }, [getRandomAngle, questionType]);
 
-  // Helper function to reset user answer
-  const resetUserAnswer = () => {
-    setUserAnswer({ 
-      sin: '', 
-      cos: '', 
-      tan: '', 
-      sec: '', 
-      csc: '', 
-      cot: '', 
-      degrees: '', 
-      radians: '',
-      referenceAngle: '',
-      coterminalAngle: '',
-      arcLength: '',
-      angularVelocity: '',
-      linearVelocity: ''
-    });
-  };
+  // Start the quiz with selected question type
+  const startQuiz = useCallback((selectedType) => {
+    // First set the question type
+    setQuestionType(selectedType);
+    
+    // Then initialize the quiz and hide options
+    setQuizInitialized(true);
+    setShowQuizOptions(false);
+    setScore({ correct: 0, total: 0 });
+    setRecentAngles([]);
+    
+    // We use setTimeout to ensure state is updated before generating the question
+    setTimeout(() => {
+      generateQuestion(selectedType);
+    }, 50);
+  }, [generateQuestion]);
 
   // Check the user's answer
   const checkAnswer = useCallback(() => {
