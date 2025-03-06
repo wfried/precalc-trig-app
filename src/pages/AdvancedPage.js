@@ -388,19 +388,19 @@ const AdvancedPage = () => {
                   <div className="bg-white p-3 rounded text-center">
                     <h5 className="font-medium mb-2">Circle</h5>
                     <p>r = a (constant)</p>
-                    <img src="https://mathworld.wolfram.com/images/eps-svg/PolarCoordinates_800.svg" alt="Circle in polar coordinates" className="h-32 mx-auto mt-2" />
+                    <img src={`${process.env.PUBLIC_URL}/images/polar-circle.svg`} alt="Circle in polar coordinates" className="h-32 mx-auto mt-2" />
                   </div>
                   
                   <div className="bg-white p-3 rounded text-center">
                     <h5 className="font-medium mb-2">Cardioid</h5>
                     <p>r = a(1 + cos(θ))</p>
-                    <img src="https://mathworld.wolfram.com/images/eps-svg/Cardioid_700.svg" alt="Cardioid in polar coordinates" className="h-32 mx-auto mt-2" />
+                    <img src={`${process.env.PUBLIC_URL}/images/polar-cardioid.svg`} alt="Cardioid in polar coordinates" className="h-32 mx-auto mt-2" />
                   </div>
                   
                   <div className="bg-white p-3 rounded text-center">
                     <h5 className="font-medium mb-2">Rose</h5>
                     <p>r = a·cos(nθ)</p>
-                    <img src="https://mathworld.wolfram.com/images/eps-svg/Rose_1000.svg" alt="Rose curve in polar coordinates" className="h-32 mx-auto mt-2" />
+                    <img src={`${process.env.PUBLIC_URL}/images/polar-rose.svg`} alt="Rose curve in polar coordinates" className="h-32 mx-auto mt-2" />
                   </div>
                 </div>
               </div>

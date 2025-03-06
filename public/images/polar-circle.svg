@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Coordinate grid -->
+  <line x1="0" y1="100" x2="200" y2="100" stroke="#ccc" stroke-width="1"/>
+  <line x1="100" y1="0" x2="100" y2="200" stroke="#ccc" stroke-width="1"/>
+  
+  <!-- Circle r = a -->
+  <circle cx="100" cy="100" r="70" fill="none" stroke="#3b82f6" stroke-width="2.5"/>
+  
+  <!-- Labels -->
+  <text x="105" y="25" font-size="12" fill="#333">r = a</text>
+</svg>
