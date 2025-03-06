@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/precalc-trig-app/static/js/main.cffa929f.js",
+    "main.js": "/precalc-trig-app/static/js/main.d27de258.js",
     "index.html": "/precalc-trig-app/index.html",
-    "main.cffa929f.js.map": "/precalc-trig-app/static/js/main.cffa929f.js.map"
+    "main.d27de258.js.map": "/precalc-trig-app/static/js/main.d27de258.js.map"
   },
   "entrypoints": [
-    "static/js/main.cffa929f.js"
+    "static/js/main.d27de258.js"
   ]
 }
