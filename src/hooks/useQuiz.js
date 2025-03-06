@@ -71,7 +71,7 @@ const useQuiz = () => {
     setTimeout(() => {
       generateQuestion(selectedType);
     }, 50);
-  }, []);
+  }, [generateQuestion]);
 
   // Generate a new question
   const generateQuestion = useCallback((type = questionType) => {
