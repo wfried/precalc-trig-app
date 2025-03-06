@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Background -->
+  <rect width="64" height="64" rx="12" fill="#f0f4f8"/>
+  
+  <!-- Coordinate grid -->
+  <line x1="32" y1="8" x2="32" y2="56" stroke="#94a3b8" stroke-width="1"/>
+  <line x1="8" y1="32" x2="56" y2="32" stroke="#94a3b8" stroke-width="1"/>
+  
+  <!-- Unit Circle -->
+  <circle cx="32" cy="32" r="24" fill="none" stroke="#3b82f6" stroke-width="2.5"/>
+  
+  <!-- Special angle markers (45°, 30°, etc.) -->
+  <circle cx="32" cy="8" r="2.5" fill="#6366f1"/>
+  <circle cx="56" cy="32" r="2.5" fill="#6366f1"/>
+  <circle cx="32" cy="56" r="2.5" fill="#6366f1"/>
+  <circle cx="8" cy="32" r="2.5" fill="#6366f1"/>
+  
+  <!-- 45° angles -->
+  <circle cx="48.97" cy="15.03" r="2.5" fill="#8b5cf6"/>
+  <circle cx="48.97" cy="48.97" r="2.5" fill="#8b5cf6"/>
+  <circle cx="15.03" cy="48.97" r="2.5" fill="#8b5cf6"/>
+  <circle cx="15.03" cy="15.03" r="2.5" fill="#8b5cf6"/>
+  
+  <!-- Highlighted angle (30°) -->
+  <circle cx="52.8" cy="20" r="3" fill="#ef4444"/>
+  
+  <!-- Angle Arc -->
+  <path d="M 44 32 A 12 12 0 0 0 52.8 20" fill="none" stroke="#ef4444" stroke-width="2"/>
+  
+  <!-- Angle line -->
+  <line x1="32" y1="32" x2="52.8" y2="20" stroke="#ef4444" stroke-width="2.5"/>
+</svg>
