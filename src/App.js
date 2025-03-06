@@ -15,27 +15,50 @@ const App = () => {
 
   // Content for different tabs
   const renderTabContent = () => {
-    switch (tabView) {
-      case 'main':
-        return <MainPage currentMode={currentMode} setCurrentMode={setCurrentMode} />;
-      case 'patterns':
-        return <PatternsPage />;
-      case 'reference':
-        return <ReferencePage />;
-      case 'rotary':
-        return <RotaryPage />;
-      case 'advanced':
-        return <AdvancedPage />;
-      default:
-        return <div>Tab content not available</div>;
-    }
+    const tabContent = (() => {
+      switch (tabView) {
+        case 'main':
+          return <MainPage currentMode={currentMode} setCurrentMode={setCurrentMode} />;
+        case 'patterns':
+          return <PatternsPage />;
+        case 'reference':
+          return <ReferencePage />;
+        case 'rotary':
+          return <RotaryPage />;
+        case 'advanced':
+          return <AdvancedPage />;
+        default:
+          return <div>Tab content not available</div>;
+      }
+    })();
+    
+    return (
+      <div 
+        id={`tabpanel-${tabView}`} 
+        role="tabpanel" 
+        aria-labelledby={`tab-${tabView}`}
+        tabIndex="0"
+      >
+        {tabContent}
+      </div>
+    );
   };
 
   return (
     <div className="flex flex-col items-center bg-gray-50 p-6 rounded-lg shadow-md max-w-4xl mx-auto">
-      <h1 className="text-3xl font-bold mb-4 text-blue-900">Precalculus Trigonometry Study Guide</h1>
+      <a 
+        href="#main-content" 
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:p-4 focus:bg-blue-700 focus:text-white focus:rounded"
+      >
+        Skip to main content
+      </a>
       
-      <TabNavigation tabView={tabView} setTabView={setTabView} />
+      <header>
+        <h1 className="text-3xl font-bold mb-4 text-blue-900">Precalculus Trigonometry Study Guide</h1>
+      </header>
+      
+      <main id="main-content">
+        <TabNavigation tabView={tabView} setTabView={setTabView} />
       
       {renderTabContent()}
       
@@ -81,6 +104,8 @@ const App = () => {
         </div>
       </div>
       
+      </main>
+      
       <footer className="mt-8 pt-4 border-t border-gray-300 w-full text-center text-gray-500 text-sm">
         <p>
           Created by Will Friedman &copy; {new Date().getFullYear()} | 
@@ -88,7 +113,8 @@ const App = () => {
             href="https://github.com/wfried/precalc-trig-app" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="ml-1 text-blue-600 hover:text-blue-800"
+            className="ml-1 text-blue-600 hover:text-blue-800 focus:outline-none focus:underline"
+            aria-label="Visit GitHub Repository"
           >
             GitHub Repository
           </a>

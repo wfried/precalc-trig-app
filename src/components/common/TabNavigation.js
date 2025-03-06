@@ -13,17 +13,31 @@ const TabNavigation = ({ tabView, setTabView }) => {
   ];
 
   return (
-    <div className="flex flex-wrap justify-center gap-2 mb-6">
-      {tabs.map(tab => (
-        <button 
-          key={tab.id}
-          className={`px-4 py-2 rounded ${tabView === tab.id ? 'bg-purple-600 text-white' : 'bg-gray-200'}`}
-          onClick={() => setTabView(tab.id)}
-        >
-          {tab.label}
-        </button>
-      ))}
-    </div>
+    <nav aria-label="Main navigation" className="mb-6 w-full">
+      <div 
+        className="flex flex-wrap justify-center gap-2" 
+        role="tablist"
+        aria-orientation="horizontal"
+      >
+        {tabs.map(tab => (
+          <button 
+            key={tab.id}
+            id={`tab-${tab.id}`}
+            className={`px-4 py-2 rounded ${
+              tabView === tab.id 
+                ? 'bg-purple-700 text-white' 
+                : 'bg-gray-200 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500'
+            }`}
+            onClick={() => setTabView(tab.id)}
+            role="tab"
+            aria-selected={tabView === tab.id}
+            aria-controls={`tabpanel-${tab.id}`}
+          >
+            {tab.label}
+          </button>
+        ))}
+      </div>
+    </nav>
   );
 };
 
