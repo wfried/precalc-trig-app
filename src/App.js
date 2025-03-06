@@ -80,6 +80,20 @@ const App = () => {
           </div>
         </div>
       </div>
+      
+      <footer className="mt-8 pt-4 border-t border-gray-300 w-full text-center text-gray-500 text-sm">
+        <p>
+          Created by Will Friedman &copy; {new Date().getFullYear()} | 
+          <a 
+            href="https://github.com/wfried/precalc-trig-app" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="ml-1 text-blue-600 hover:text-blue-800"
+          >
+            GitHub Repository
+          </a>
+        </p>
+      </footer>
     </div>
   );
 };
